@@ -29,7 +29,10 @@
 ?>
 
 <div id="mainForm">
-
+<a href="descargarEncuesta.php" id="btnDescarga" download>
+    Descargar Encuesta en xls
+    <img src="assets/imgs/excel.png" alt="excel" style="width: 30px;">
+</a>
     <div id="megadiv2">
         <table id="header">
             <tbody>

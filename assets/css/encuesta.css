@@ -147,3 +147,8 @@ th {
     margin-top:10px;
      background-color: #999 !important;
 }
+#btnDescarga{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 30px;
+}
