@@ -1,0 +1,144 @@
+body {
+    background-color: #f2f1f0;
+    color: #222;
+}
+
+body, textarea, input{
+    color: #222;
+    font: 13px/1 "Helvetica Neue",Arial,sans-serif;
+}
+#mainForm {
+    width: 750px;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0 0 7px #888;
+    padding: 50px;
+    border: 1px solid #929394;
+    min-height: 900px;
+}
+.logo{
+    width: 100px;
+    height: auto;
+}
+#mainForm {
+    width: 800px;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0 0 7px #888;
+    padding: 50px;
+    border: 1px solid #929394;
+    min-height: 900px;
+}
+.conteFlex{
+    margin: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.conteFlex span:hover{
+    cursor: pointer;
+    background-color: #555;
+    color: #fff;
+    font-weight:800;
+}
+.conteFlex label:hover{
+    cursor: pointer;
+}
+.conteFlex span{
+    background-color: #cecece;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    line-height: 2;
+}
+input[type="radio"]{
+    position: absolute;            
+    display:none; 
+    cursor: pointer;
+    /* opacity: 0; */
+}
+.checkenRepuesta{
+    color: #555;
+    font-weight: 800;
+    background-color: #8dc53c !important;
+}
+.progress-bar{
+    background-color: #8dc53c !important;
+    background-image: none;
+}
+.btn-primary{
+    width: 100%;
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+    margin-top:20px
+}
+.btn-primary:hover{
+    opacity: 0.9;
+    background-color: #218838 !important; 
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    width: 100%;
+    color: #333;
+    background-color: silver !important;
+    border-color: #ccc !important;
+}
+.loader{
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100000000;
+    background: #cecece;
+    opacity: 0.5; 
+}
+.form-group{
+    margin-top: 15px !important;
+}
+.btn:hover, .btn:focus {
+    background-color: #218838 !important;
+    border-color: #218838 !important;
+    text-decoration: none;
+  }
+input[type=text]{
+    padding: 5px;
+}
+input:focus {
+    border: 1px solid #e0e0e0;
+    outline: none !important;
+}
+#mensaje{
+    display: none;
+    color: black;
+    background-color: #e0a800;
+    border-color: #d39e00;
+    padding: 15px;
+    border-radius: 3px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#cabecera{
+    background-color: #cecece;
+    line-height: 2;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    background-color: transparent;
+}
+td,
+th {
+    padding: 2px;
+    border: 1px solid #aaa !important;
+}
