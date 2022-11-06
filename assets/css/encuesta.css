@@ -18,7 +18,8 @@ body, textarea, input{
     min-height: 900px;
 }
 .logo{
-    width: 100px;
+    display: flex;
+    width: 150px;
     height: auto;
 }
 #mainForm {
@@ -48,15 +49,15 @@ body, textarea, input{
 }
 .conteFlex span{
     background-color: #cecece;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 15px;
-    line-height: 2;
+    padding: 17px 0px;
 }
 input[type="radio"]{
     position: absolute;            
@@ -141,4 +142,8 @@ td,
 th {
     padding: 2px;
     border: 1px solid #aaa !important;
+}
+.progress{
+    margin-top:10px;
+     background-color: #999 !important;
 }

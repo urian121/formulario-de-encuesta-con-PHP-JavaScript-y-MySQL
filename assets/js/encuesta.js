@@ -1,46 +1,13 @@
+
 /*Apenas termine de cargar el documento entra aqui*/    
 window.addEventListener('load', (event) => {
     let miBody = document.body;
        miBody.classList.remove('loader');
        accionBtn(sustraerEntero=0);
-   
-        desabilitarInputsDefault(); //Llamando función
-   
-    /**Buscar usuario */
-    const inputUsuario = document.querySelector('#usuario');
-            inputUsuario.addEventListener("change", () => {
-    const inputValorUsuario = inputUsuario.value;
-        
-        $.ajax({
-            url: 'index.php',
-            type: 'POST',
-            data: '&evento=Operativo&accion=buscarUserSoporte&inputValorUsuario='+inputValorUsuario,
-            dataType: 'json',
-            success: function (data) {
-                /*validando si hay resultados*/
-                if(data.respuesta.length >0){
-                    document.querySelector('#cargo').value = (data.respuesta[0].nombre);
-                }else{
-                    document.querySelector('#cargo').value = '';
-                }
-            }
-        });
-
-    });
 
 });
 
-function desabilitarInputsDefault(){
-    const inputIP    = document.querySelector('#ip');
-          inputIP.readOnly = true; 
-          inputIP.style.background = '#f8f8f8';
-          inputIP.style.border = '1px solid #cecece';
-      
-    const inputCargo = document.querySelector('#cargo');
-          inputCargo.readOnly = true;
-          inputCargo.style.background = '#f8f8f8';
-          inputCargo.style.border = '1px solid #cecece';
-}
+
 
 
 function respuesta(idPregunta, idRespuesta){
@@ -61,7 +28,11 @@ function contadorChecken(){
     $("input[type=radio]:checked").each(function(){
       valoresCheck.push(this.value);
       let totalChecken = (valoresCheck.length);
-      let totalPreguntas = '<?php echo (int) $totalNumerosPreguntas; ?>';
+      let totalPBD = document.querySelector('#totalPreguntasBD');
+      //console.log(totalPBD);
+      let totalPreguntas = Number(totalPBD.dataset.totalpreg);
+      //console.log(totalPreguntas);
+
       let porcentaje   = (totalChecken * 100) / totalPreguntas;
       //console.log(porcentaje);
       let porcentajeDecimale = Number(porcentaje.toFixed(3)); //Extraigo 3 decimales y formateo la cantidad a numerico
@@ -94,31 +65,21 @@ function accionBtn(sustraerEntero=0){
 
 function saveformFormatoGS() {
     let formFormatoGS = $('#formFormatoGS').serialize();
-
-    let user = document.querySelector('#usuario').value.length;
-        if(user =='0'){
-            const divMsj     = document.querySelector('#mensaje'); 
-                  divMsj.innerHTML = 'Debes asignar un usuario';
-                   divMsj.style.display = 'block';
-            //Ocultar mensaje      
-            const myTimeout = setTimeout(() => {
-                   divMsj.style.display = 'none';
-                  }, "1500");
-
-            return;
-        }
+    let spanCodigo = document.querySelector('#codigo').textContent;
+    let codigo = Number(spanCodigo);
 
     $.ajax({
-        url: 'index.php',
+        url: 'saved_encuesta.php',
         type: 'POST',
-        data: formFormatoGS + '&evento=Operativo&accion=insertformFormatoGS',
+        data: formFormatoGS +'&codigo='+codigo,
         dataType: 'json',
         success: function (data) {
             console.log(data);
-            if(data.respuesta=='1'){
-                alert('El formato fue diligenciado con exito');
-                window.close();
+            if(data.respuesta){
+                alert('Felicitaciones, encuesta llenada correctamente.');
+                location.href ="index.php";
             }
+
         }
     }); 
 }
