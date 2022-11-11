@@ -53,7 +53,7 @@
 
         <br><br>
         <h4 class="text-center">Encuesta Dinámica con PHP - JavaScript Y MySQ <hr></h1>
-        <form id="formFormatoGS" onsubmit="saveformFormatoGS();return(false);">
+        <form id="formFormatoGS" onsubmit="saveEncuesta();return(false);">
         <table class="space padding-sm">
             <thead>
                 <tr id="cabecera">    
@@ -89,7 +89,6 @@
                 <label for="observacion">Observaciones</label>
                 <textarea name="observacion" class="form-control" rows="3">No hay observación</textarea>
                 </div>
-            <div id="mensaje"></div>
             <button type="submit" class="btn btn-primary" id="btnSend">DEBES RESPONDER TODAS LAS PREGUNTAS</button>
         </form>
         
