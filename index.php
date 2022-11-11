@@ -52,8 +52,24 @@
         <p id="totalPreguntasBD" data-totalPreg="<?php echo mysqli_num_rows($query); ?>"></p>
 
         <br><br>
-        <h4 class="text-center">Encuesta Dinámica con PHP - JavaScript Y MySQ <hr></h1>
-        <form id="formFormatoGS" onsubmit="saveEncuesta();return(false);">
+        <h4 class="text-center">Encuesta Dinámica con: <hr></h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <img src="assets/imgs/php.png" class="img-fluid" id="withImg" alt="php">
+                </div>
+                <div class="col-sm">
+                    <img src="assets/imgs/javascript.png" class="img-fluid" id="withImg" alt="javascript">
+                </div>
+                <div class="col-sm">
+                <img src="assets/imgs/mysql_workbench.png" class="img-fluid" id="withImg" style='max-width: 80px !important;' alt="MySQL">
+                </div>
+            </div>
+        </div>
+
+        
+    <form id="formFormatoGS" onsubmit="savedEncuesta();return(false);">
         <table class="space padding-sm">
             <thead>
                 <tr id="cabecera">    
@@ -90,7 +106,7 @@
                 <textarea name="observacion" class="form-control" rows="3">No hay observación</textarea>
                 </div>
             <button type="submit" class="btn btn-primary" id="btnSend">DEBES RESPONDER TODAS LAS PREGUNTAS</button>
-        </form>
+    </form>
         
         
         <div class="progress">

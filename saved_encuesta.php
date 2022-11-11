@@ -1,11 +1,14 @@
 <?php
 include('config.php');
 
-        /*
+ /*       
         echo '<pre>';
                 print_r($_POST);
-        echo '</pre><br>'; 
-        */
+        echo '</pre><br>';
+exit(); 
+*/
+        
+        
 foreach ($_POST['respuesta'] as $idPreg => $respPreg) {
         $InsertEncuesta = ("INSERT INTO respuestas_encuesta(
                 id_pregunta,

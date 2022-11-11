@@ -152,3 +152,9 @@ th {
     justify-content: end;
     margin-bottom: 30px;
 }
+#withImg{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    max-width: 50px !important;
+}

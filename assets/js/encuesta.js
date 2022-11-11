@@ -63,7 +63,7 @@ function accionBtn(sustraerEntero=0){
      }
 }
 
-function saveEncuesta() {
+function savedEncuesta() {
     let formFormatoGS = $('#formFormatoGS').serialize();
     let spanCodigo = document.querySelector('#codigo').textContent;
     let codigo = Number(spanCodigo);
